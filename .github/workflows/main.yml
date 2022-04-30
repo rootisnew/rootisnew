@@ -19,6 +19,6 @@ jobs:
       - uses: manyuanrong/setup-ossutil@v1.0 #使用阿里云的ossutil工具
   with:
     endpoint: "oss-cn-hangzhou.aliyuncs.com" #这里是你的bucket的endpoint，根据你选择的区域不同会不一样，在Bucket页面查看即可
-    access-key-id: ${{ LTAI5tDeqsjDv3wGhXFhZFnd }}
-    access-key-secret: ${{ oHd35UwgoFxf6IgfY9j59IKlZiVD86 }}
+    access-key-id: ${{ secrets.KEY  }}
+    access-key-secret: ${{ secrets.SECRET }}
 - run: ossutil cp -rf public oss://Mr.yang-blog/
