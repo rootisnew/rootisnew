@@ -18,7 +18,7 @@ jobs:
       - run: hexo generate
       - uses: manyuanrong/setup-ossutil@v1.0
   with:
-    endpoint: "oss-cn-hangzhou.aliyuncs.com"
+    endpoint: "oss-cn-shanghai.aliyuncs.com"
     access-key-id: ${{ secrets.KEY  }}
     access-key-secret: ${{ secrets.SECRET }}
 - run: ossutil cp -rf public oss://yanghongtao-blog/
