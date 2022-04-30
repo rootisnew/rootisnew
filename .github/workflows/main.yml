@@ -21,4 +21,4 @@ jobs:
     endpoint: "oss-cn-hangzhou.aliyuncs.com" #这里是你的bucket的endpoint，根据你选择的区域不同会不一样，在Bucket页面查看即可
     access-key-id: ${{ LTAI5tDeqsjDv3wGhXFhZFnd }}
     access-key-secret: ${{ oHd35UwgoFxf6IgfY9j59IKlZiVD86 }}
-- run: ossutil cp -rf public oss://backup-nginx.oss-cn-zhangjiakou.aliyuncs.com/ #这个命令就是把生成的public文件夹的内容，传到oss的Bucket中，选择rf的参数直接覆盖文件，把“jayshaoblog”替换为你的bucket名字
+- run: ossutil cp -rf public oss://Mr.yang-blog/
