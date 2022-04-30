@@ -1,0 +1,18 @@
+name: Mr.yang 的博客
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 #第一步显示checkout代码
+      - name: Use Node.js #设置环境为NodeJS，下面的Version可以设置Node的版本
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+      - run: npm install #这里就是安装完node之后执行的命令了，和本地生成Hexo博客命令一致。
+      - run: npm install -g hexo-cli
+      - run: hexo generate
